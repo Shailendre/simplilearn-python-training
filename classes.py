@@ -22,6 +22,10 @@ class calculator:
 c = calculator()
 # for all defs to be called through instances
 # need to add self.
-# all methods should be containt
+# allinstance methods should have self
+
+# internally it reseolves to:
+# calculator.add(c, 2, 3)
 print(c.add(2,3))
+# static methods, called using class name
 print(calculator.mul(4,5))
