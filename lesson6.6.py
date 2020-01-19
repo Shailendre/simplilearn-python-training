@@ -19,3 +19,7 @@ print (map)
 # add an entry
 map['d'] = [99,98]
 print(map)
+
+## important, how to iterate map
+for k in map: # THIS WILL RETURN LIST OF KEY ONLY
+    print(k)
