@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Book
 # Create your views here.
 
 # idea is to return the index template/ landing template
@@ -8,7 +8,11 @@ from django.shortcuts import render
 # /store/index
 # /store/
 def index(request):
-    return render(request, 'index.html')
+    # orm query
+    # number of books
+    count = Book.objects.all().count() # books as an objects get all, get the count
+    # need to create a context map, so that the `count`, can be used in template
+    return render(request, 'index.html',  {'count' : count})
 
 # /store/v1
 def v1(request):
