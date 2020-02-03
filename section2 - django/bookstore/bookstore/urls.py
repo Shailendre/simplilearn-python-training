@@ -18,6 +18,7 @@ from django.urls import include, path
 from store import urls, views
 
 urlpatterns = [
+    path('accounts/', include('registration.backends.default.urls')), # this comes from the #django-registration-redux
     path('admin/', admin.site.urls),
     path('store', include('store.urls'), name="store.urls")
 ]
